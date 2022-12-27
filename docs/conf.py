@@ -1,7 +1,6 @@
 import importlib.metadata
 import re
 
-
 project = "jsonschema-specifications"
 author = "Julian Berman"
 copyright = f"2022, {author}"
