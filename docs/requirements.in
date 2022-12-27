@@ -1,0 +1,7 @@
+file:.#egg=jsonschema_specifications
+furo
+pygments-github-lexers
+sphinx-copybutton
+sphinx>5
+sphinxcontrib-spelling>5
+sphinxext-opengraph
