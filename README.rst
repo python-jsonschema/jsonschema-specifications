@@ -4,6 +4,8 @@
 
 |PyPI| |Pythons| |CI| |ReadTheDocs|
 
+JSON support files from the `JSON Schema Specifications <https://json-schema.org/specification.html>`_ (metaschemas, vocabularies, etc.), packaged for runtime access from Python.
+
 .. |PyPI| image:: https://img.shields.io/pypi/v/jsonschema-specifications.svg
   :alt: PyPI version
   :target: https://pypi.org/project/jsonschema-specifications/

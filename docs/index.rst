@@ -1,5 +1,6 @@
 .. include:: ../README.rst
 
+Resources are exposed via a `referencing.Registry`.
 
 Contents
 --------

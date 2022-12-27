@@ -52,6 +52,7 @@ autosectionlabel_prefix_document = True
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
+    "referencing": ("https://referencing.readthedocs.io/en/latest/", None),
 }
 
 # -- sphinxcontrib-spelling --

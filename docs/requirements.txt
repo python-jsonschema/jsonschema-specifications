@@ -6,6 +6,8 @@
 #
 alabaster==0.7.12
     # via sphinx
+attrs==22.2.0
+    # via referencing
 babel==2.11.0
     # via sphinx
 beautifulsoup4==4.11.1
@@ -19,7 +21,9 @@ docutils==0.19
 furo==2022.12.7
     # via -r docs/requirements.in
 idna==3.4
-    # via requests
+    # via
+    #   requests
+    #   yarl
 imagesize==1.4.1
     # via sphinx
 jinja2==3.1.2
@@ -28,6 +32,8 @@ file:.#egg=jsonschema_specifications
     # via -r docs/requirements.in
 markupsafe==2.1.1
     # via jinja2
+multidict==6.0.4
+    # via yarl
 packaging==22.0
     # via sphinx
 pyenchant==3.2.2
@@ -39,8 +45,12 @@ pygments==2.13.0
     #   sphinx
 pygments-github-lexers==0.0.5
     # via -r docs/requirements.in
+pyrsistent==0.19.2
+    # via referencing
 pytz==2022.7
     # via babel
+referencing==0.8.8
+    # via jsonschema-specifications
 requests==2.28.1
     # via sphinx
 snowballstemmer==2.2.0
@@ -77,3 +87,5 @@ sphinxext-opengraph==0.7.4
     # via -r docs/requirements.in
 urllib3==1.26.13
     # via requests
+yarl==1.8.2
+    # via referencing
