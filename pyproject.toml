@@ -32,7 +32,10 @@ classifiers = [
 ]
 dynamic = ["version"]
 
-dependencies = ["referencing>=0.8.8"]
+dependencies = [
+  "referencing>=0.8.9",
+  "importlib_resources>=1.4.0;python_version<'3.9'",
+]
 
 [project.urls]
 Documentation = "https://jsonschema-specifications.readthedocs.io/"
