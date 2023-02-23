@@ -32,7 +32,7 @@ classifiers = [
 dynamic = ["version"]
 
 dependencies = [
-  "referencing>=0.16.4",
+  "referencing>=0.21.0",
   "importlib_resources>=1.4.0;python_version<'3.9'",
 ]
 

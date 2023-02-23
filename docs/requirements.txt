@@ -67,7 +67,7 @@ python-dateutil==2.8.2
     # via matplotlib
 pytz==2022.7.1
     # via babel
-referencing==0.16.4
+referencing==0.21.0
     # via jsonschema-specifications
 requests==2.28.2
     # via sphinx
@@ -101,7 +101,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sphinxcontrib-spelling==7.7.0
+sphinxcontrib-spelling==8.0.0
     # via -r docs/requirements.in
 sphinxext-opengraph==0.8.1
     # via -r docs/requirements.in
