@@ -30,8 +30,7 @@ def _schemas():
             children = [child] if child.is_file() else child.iterdir()
             for path in children:
                 contents = json.loads(path.read_text())
-                resource = Resource.from_contents(contents)
-                yield resource.id(), resource
+                yield Resource.from_contents(contents)
 
 
-REGISTRY: Registry = Registry().with_resources(_schemas()).crawl()
+REGISTRY: Registry = (_schemas() @ Registry()).crawl()
