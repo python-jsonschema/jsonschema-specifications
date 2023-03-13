@@ -8,13 +8,13 @@ alabaster==0.7.13
     # via sphinx
 attrs==22.2.0
     # via referencing
-babel==2.11.0
+babel==2.12.1
     # via sphinx
 beautifulsoup4==4.11.2
     # via furo
 certifi==2022.12.7
     # via requests
-charset-normalizer==3.0.1
+charset-normalizer==3.1.0
     # via requests
 contourpy==1.0.7
     # via matplotlib
@@ -22,7 +22,7 @@ cycler==0.11.0
     # via matplotlib
 docutils==0.19
     # via sphinx
-fonttools==4.38.0
+fonttools==4.39.0
     # via matplotlib
 furo==2022.12.7
     # via -r docs/requirements.in
@@ -38,7 +38,7 @@ kiwisolver==1.4.4
     # via matplotlib
 markupsafe==2.1.2
     # via jinja2
-matplotlib==3.7.0
+matplotlib==3.7.1
     # via sphinxext-opengraph
 numpy==1.24.2
     # via
@@ -61,16 +61,14 @@ pygments-github-lexers==0.0.5
     # via -r docs/requirements.in
 pyparsing==3.0.9
     # via matplotlib
-pyrsistent==0.19.3
-    # via referencing
 python-dateutil==2.8.2
     # via matplotlib
-pytz==2022.7.1
-    # via babel
-referencing==0.23.0
+referencing==0.24.4
     # via jsonschema-specifications
 requests==2.28.2
     # via sphinx
+rpds-py==0.6.1
+    # via referencing
 six==1.16.0
     # via python-dateutil
 snowballstemmer==2.2.0
@@ -105,5 +103,5 @@ sphinxcontrib-spelling==8.0.0
     # via -r docs/requirements.in
 sphinxext-opengraph==0.8.1
     # via -r docs/requirements.in
-urllib3==1.26.14
+urllib3==1.26.15
     # via requests
