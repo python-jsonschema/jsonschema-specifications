@@ -1,6 +1,8 @@
 import importlib.metadata
 import re
 
+HOMEPAGE = "https://github.com/python-jsonschema/jsonschema-specifications"
+
 project = "jsonschema-specifications"
 author = "Julian Berman"
 copyright = f"2022, {author}"
@@ -38,11 +40,18 @@ def entire_domain(host):
 
 linkcheck_ignore = [
     entire_domain("img.shields.io"),
-    "https://github.com/python-jsonschema/jsonschema/actions",
-    "https://github.com/python-jsonschema/jsonschema/workflows/CI/badge.svg",
+    f"{HOMEPAGE}/actions",
+    f"{HOMEPAGE}/workflows/CI/badge.svg",
 ]
 
 # = Extensions =
+
+# -- autodoc --
+
+autodoc_default_options = {
+    "members": True,
+    "member-order": "bysource",
+}
 
 # -- autosectionlabel --
 

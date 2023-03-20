@@ -9,7 +9,7 @@ try:
 except ImportError:
     from importlib_resources import files  # type: ignore
 
-from referencing import Registry, Resource
+from referencing import Resource
 
 
 def _schemas():
@@ -31,6 +31,3 @@ def _schemas():
             for path in children:
                 contents = json.loads(path.read_text())
                 yield Resource.from_contents(contents)
-
-
-REGISTRY: Registry = (_schemas() @ Registry()).crawl()
