@@ -10,7 +10,7 @@ attrs==22.2.0
     # via referencing
 babel==2.12.1
     # via sphinx
-beautifulsoup4==4.11.2
+beautifulsoup4==4.12.0
     # via furo
 certifi==2022.12.7
     # via requests
@@ -22,7 +22,7 @@ cycler==0.11.0
     # via matplotlib
 docutils==0.19
     # via sphinx
-fonttools==4.39.0
+fonttools==4.39.2
     # via matplotlib
 furo==2022.12.7
     # via -r docs/requirements.in
@@ -63,11 +63,11 @@ pyparsing==3.0.9
     # via matplotlib
 python-dateutil==2.8.2
     # via matplotlib
-referencing==0.24.4
+referencing==0.25.0
     # via jsonschema-specifications
 requests==2.28.2
     # via sphinx
-rpds-py==0.6.1
+rpds-py==0.7.0
     # via referencing
 six==1.16.0
     # via python-dateutil
