@@ -7,17 +7,17 @@ source = "vcs"
 
 [project]
 name = "jsonschema-specifications"
-description = "Support files exposing JSON from the JSON Schema specifications"
+description = "The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
 readme = "README.rst"
-requires-python = ">=3.8"
 license = {text = "MIT"}
+requires-python = ">=3.8"
 keywords = ["jsonschema", "json", "data", "validation"]
 authors = [
   {email = "Julian+jsonschema-specifications@GrayVines.com"},
   {name = "Julian Berman"},
 ]
 classifiers = [
-  "Development Status :: 4 - Beta",
+  "Development Status :: 5 - Production/Stable",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
   "License :: OSI Approved :: MIT License",
@@ -25,7 +25,6 @@ classifiers = [
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
@@ -42,6 +41,14 @@ Homepage = "https://github.com/python-jsonschema/jsonschema-specifications"
 Issues = "https://github.com/python-jsonschema/jsonschema-specifications/issues/"
 Funding = "https://github.com/sponsors/Julian"
 Source = "https://github.com/python-jsonschema/jsonschema-specifications"
+
+[tool.coverage.run]
+branch = true
+source = ["referencing"]
+dynamic_context = "test_function"
+
+[tool.coverage.report]
+fail_under = 100
 
 [tool.doc8]
 ignore = [
