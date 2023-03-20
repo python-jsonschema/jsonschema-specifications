@@ -43,6 +43,11 @@ Issues = "https://github.com/python-jsonschema/jsonschema-specifications/issues/
 Funding = "https://github.com/sponsors/Julian"
 Source = "https://github.com/python-jsonschema/jsonschema-specifications"
 
+[tool.doc8]
+ignore = [
+    "D001",  # one sentence per line, so max length doesn't make sense
+]
+
 [tool.isort]
 combine_as_imports = true
 from_first = true
