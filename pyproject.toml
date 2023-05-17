@@ -11,27 +11,34 @@ description = "The JSON Schema meta-schemas and vocabularies, exposed as a Regis
 readme = "README.rst"
 license = {text = "MIT"}
 requires-python = ">=3.8"
-keywords = ["jsonschema", "json", "data", "validation"]
+keywords = [
+    "validation",
+    "data validation",
+    "jsonschema",
+    "json",
+    "json schema",
+]
 authors = [
   {email = "Julian+jsonschema-specifications@GrayVines.com"},
   {name = "Julian Berman"},
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: File Formats :: JSON :: JSON Schema",
 ]
 dynamic = ["version"]
 
 dependencies = [
-  "referencing>=0.25.0",
+  "referencing>=0.28.0",
   "importlib_resources>=1.4.0;python_version<'3.9'",
 ]
 
@@ -44,7 +51,7 @@ Source = "https://github.com/python-jsonschema/jsonschema-specifications"
 
 [tool.coverage.run]
 branch = true
-source = ["referencing"]
+source = ["jsonschema-specifications"]
 dynamic_context = "test_function"
 
 [tool.coverage.report]
@@ -57,6 +64,7 @@ ignore = [
 
 [tool.isort]
 combine_as_imports = true
+ensure_newline_before_comments = true
 from_first = true
 include_trailing_comma = true
 multi_line_output = 3
