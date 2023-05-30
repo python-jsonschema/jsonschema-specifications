@@ -16,7 +16,6 @@ def _schemas():
     """
     All schemas we ship.
     """
-
     # importlib.resources.abc.Traversal doesn't have nice ways to do this that
     # I'm aware of...
     #
