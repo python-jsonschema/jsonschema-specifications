@@ -28,5 +28,5 @@ def _schemas():
         for child in version.iterdir():
             children = [child] if child.is_file() else child.iterdir()
             for path in children:
-                contents = json.loads(path.read_text())
+                contents = json.loads(path.read_text(encoding="utf-8"))
                 yield Resource.from_contents(contents)

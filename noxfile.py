@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 import nox
 
@@ -23,7 +24,8 @@ def session(default=True, **kwargs):
 @session(python=["3.8", "3.9", "3.10", "3.11", "pypy3"])
 def tests(session):
     session.install("pytest", ROOT)
-    session.run("pytest", "--verbosity=3")
+    env = dict(os.environ, PYTHONWARNDEFAULTENCODING="1")
+    session.run("pytest", "--verbosity=3", "--pythonwarnings=error", env=env)
 
 
 @session()
