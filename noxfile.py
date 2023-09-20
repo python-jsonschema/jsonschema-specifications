@@ -96,3 +96,19 @@ def docs_style(session):
         "pygments-github-lexers",
     )
     session.run("python", "-m", "doc8", "--config", PYPROJECT, DOCS)
+
+
+@session(default=False)
+def requirements(session):
+    """
+    Update the project's pinned requirements. Commit the result.
+    """
+    session.install("pip-tools")
+    for each in [DOCS / "requirements.in"]:
+        session.run(
+            "pip-compile",
+            "--resolver",
+            "backtracking",
+            "-U",
+            each.relative_to(ROOT),
+        )
