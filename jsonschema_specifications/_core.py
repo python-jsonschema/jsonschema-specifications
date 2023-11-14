@@ -1,5 +1,5 @@
 """
-A `referencing.Registry` containing schemas from the JSON Schema specification.
+Load all the JSON Schema specification's official schemas.
 """
 
 import json
