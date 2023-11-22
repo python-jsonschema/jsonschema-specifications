@@ -48,6 +48,7 @@ Documentation = "https://jsonschema-specifications.readthedocs.io/"
 Homepage = "https://github.com/python-jsonschema/jsonschema-specifications"
 Issues = "https://github.com/python-jsonschema/jsonschema-specifications/issues/"
 Funding = "https://github.com/sponsors/Julian"
+Tidelift = "https://tidelift.com/subscription/pkg/pypi-jsonschema-specifications?utm_source=pypi-jsonschema-specifications&utm_medium=referral&utm_campaign=pypi-link"
 Source = "https://github.com/python-jsonschema/jsonschema-specifications"
 
 [tool.coverage.html]
