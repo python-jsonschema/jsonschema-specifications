@@ -8,3 +8,7 @@ def test_it_contains_metaschemas():
     assert isinstance(schema, Mapping)
     assert schema["$id"] == "http://json-schema.org/draft-07/schema#"
     assert schema["title"] == "Core schema meta-schema"
+
+
+def test_it_is_crawled():
+    assert REGISTRY.crawl() == REGISTRY

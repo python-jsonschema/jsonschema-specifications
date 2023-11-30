@@ -7,5 +7,5 @@ from jsonschema_specifications._core import _schemas
 
 #: A `referencing.jsonschema.SchemaRegistry` containing all of the official
 #: meta-schemas and vocabularies.
-REGISTRY = _schemas() @ _EMPTY_REGISTRY
+REGISTRY = (_schemas() @ _EMPTY_REGISTRY).crawl()
 __all__ = ["REGISTRY"]
