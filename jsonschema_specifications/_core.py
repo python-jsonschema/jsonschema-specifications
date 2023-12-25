@@ -7,7 +7,9 @@ import json
 try:
     from importlib.resources import files
 except ImportError:
-    from importlib_resources import files  # type: ignore
+    from importlib_resources import (  # type: ignore[import-not-found, no-redef]
+        files,
+    )
 
 from referencing import Resource
 
