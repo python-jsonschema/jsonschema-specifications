@@ -2,6 +2,9 @@
 
 Resources are exposed via a `referencing.Registry`.
 
+The purpose of this package is to provide these schemas via an explicit public API.
+In other words, if you're authoring schemas, or building JSON Schema tooling, or otherwise need access to the JSON Schema official metaschemas and vocabularies, they're exposed here for runtime use in a way that doesn't require you to copy them, or to reach into the data files of a Python package you didn't necessarily author.
+
 Usage
 -----
 
