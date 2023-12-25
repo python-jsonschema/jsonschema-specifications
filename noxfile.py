@@ -66,7 +66,7 @@ def typing(session):
     """
     Check static typing.
     """
-    session.install("mypy", ROOT)
+    session.install("mypy", "pytest", ROOT)
     session.run("python", "-m", "mypy", PACKAGE)
 
 
