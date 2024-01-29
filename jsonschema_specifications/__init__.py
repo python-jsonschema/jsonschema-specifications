@@ -1,6 +1,7 @@
 """
 The JSON Schema meta-schemas and vocabularies, exposed as a Registry.
 """
+
 from referencing.jsonschema import EMPTY_REGISTRY as _EMPTY_REGISTRY
 
 from jsonschema_specifications._core import _schemas
