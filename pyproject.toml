@@ -83,6 +83,8 @@ multi_line_output = 3
 
 [tool.ruff]
 line-length = 79
+
+[tool.ruff.lint]
 select = ["ALL"]
 ignore = [
   "A001",  # It's fine to shadow builtins
@@ -129,14 +131,14 @@ ignore = [
 [tool.ruff.lint.flake8-pytest-style]
 mark-parentheses = false
 
-[tool.ruff.flake8-quotes]
+[tool.ruff.lint.flake8-quotes]
 docstring-quotes = "double"
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
 from-first = true
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "noxfile.py" = ["ANN", "D100", "S101", "T201"]
 "docs/*" = ["ANN", "D", "INP001"]
 "jsonschema_specifications/tests/*" = ["ANN", "D", "RUF012", "S"]
