@@ -12,7 +12,7 @@ babel==2.15.0
     # via sphinx
 beautifulsoup4==4.12.3
     # via furo
-certifi==2024.2.2
+certifi==2024.7.4
     # via requests
 charset-normalizer==3.3.2
     # via requests
@@ -30,7 +30,7 @@ file:.#egg=jsonschema_specifications
     # via -r docs/requirements.in
 markupsafe==2.1.5
     # via jinja2
-packaging==24.0
+packaging==24.1
     # via sphinx
 pyenchant==3.3.0rc1
     # via
@@ -45,9 +45,9 @@ pygments-github-lexers==0.0.5
     # via -r docs/requirements.in
 referencing==0.35.1
     # via jsonschema-specifications
-requests==2.31.0
+requests==2.32.3
     # via sphinx
-rpds-py==0.18.1
+rpds-py==0.19.0
     # via referencing
 snowballstemmer==2.2.0
     # via sphinx
@@ -81,5 +81,5 @@ sphinxcontrib-spelling==8.0.0
     # via -r docs/requirements.in
 sphinxext-opengraph==0.9.1
     # via -r docs/requirements.in
-urllib3==2.2.1
+urllib3==2.2.2
     # via requests
