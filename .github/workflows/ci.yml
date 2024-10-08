@@ -2,27 +2,17 @@ name: CI
 
 on:
   push:
+    branches-ignore:
+      - "wip*"
+    tags:
+      - "v*"
   pull_request:
-  release:
-    types: [published]
   schedule:
     # Daily at 6:43
     - cron: "43 6 * * *"
-
-env:
-  PIP_DISABLE_PIP_VERSION_CHECK: "1"
-  PIP_NO_PYTHON_VERSION_WARNING: "1"
+  workflow_dispatch:
 
 jobs:
-  pre-commit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-      - uses: pre-commit/action@v3.0.1
-
   list:
     runs-on: ubuntu-latest
     outputs:
@@ -40,6 +30,7 @@ jobs:
   ci:
     needs: list
     runs-on: ${{ matrix.os }}
+
     strategy:
       fail-fast: false
       matrix:
@@ -58,7 +49,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: |
-            3.8
             3.9
             3.10
             3.11
@@ -66,8 +56,12 @@ jobs:
             3.13
             pypy3.10
           allow-prereleases: true
+
+      - name: Set up uv
+        uses: hynek/setup-cached-uv@v2
       - name: Set up nox
         uses: wntrblm/nox@2024.04.15
+
       - name: Run nox
         run: nox -s "${{ matrix.noxenv }}" -- ${{ matrix.posargs }}
 
@@ -77,6 +71,7 @@ jobs:
     environment:
       name: PyPI
       url: https://pypi.org/p/jsonschema-specifications
+
     permissions:
       contents: write
       id-token: write
@@ -87,10 +82,14 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Set up uv
+        uses: hynek/setup-cached-uv@v2
       - name: Install dependencies
-        run: python -m pip install build
+        run: uv pip install --system build
+
       - name: Create packages
         run: python -m build .
+
       - name: Publish to PyPI
         if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@release/v1
