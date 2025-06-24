@@ -7,11 +7,11 @@ source = "vcs"
 
 [project]
 name = "jsonschema-specifications"
-license = "MIT"
-license-files = ["COPYING"]
 description = "The JSON Schema meta-schemas and vocabularies, exposed as a Registry"
 requires-python = ">=3.9"
 readme = "README.rst"
+license = "MIT"
+license-files = ["COPYING"]
 keywords = [
     "validation",
     "data validation",
@@ -70,8 +70,8 @@ skip_covered = true
 
 [tool.doc8]
 ignore = [
-    "D000",  # see PyCQA/doc8#125
-    "D001",  # one sentence per line, so max length doesn't make sense
+  "D000",  # see PyCQA/doc8#125
+  "D001",  # one sentence per line, so max length doesn't make sense
 ]
 
 [tool.ruff]
@@ -83,6 +83,7 @@ ignore = [
   "A001",  # It's fine to shadow builtins
   "A002",
   "A003",
+  "A005",
   "ARG",  # This is all wrong whenever an interface is involved
   "ANN",  # Just let the type checker do this
   "B006",  # Mutable arguments require care but are OK if you don't abuse them
@@ -106,7 +107,9 @@ ignore = [
   "FBT",  # It's worth avoiding boolean args but I don't care to enforce it
   "FIX",  # Yes thanks, if I could it wouldn't be there
   "N",  # These naming rules are silly
-  "PLR0912",  # These metrics are fine to be aware of but not to enforce
+  "PLC0415", # too noisy, there are too many cases this is fine
+  "PLR0911", # These metrics are fine to be aware of but not to enforce
+  "PLR0912",
   "PLR0913",
   "PLR0915",
   "PLW2901",  # Shadowing for loop variables is occasionally fine.
@@ -136,4 +139,4 @@ from-first = true
 [tool.ruff.lint.per-file-ignores]
 "noxfile.py" = ["ANN", "D100", "S101", "T201"]
 "docs/*" = ["ANN", "D", "INP001"]
-"jsonschema_specifications/tests/*" = ["ANN", "D", "RUF012", "S"]
+"jsonschema_specifications/tests/*" = ["ANN", "D", "RUF012", "S", "PLR", "TRY"]
